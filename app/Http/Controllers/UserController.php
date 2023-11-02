@@ -12,4 +12,19 @@ class UserController extends Controller
     $users = User::all();
     return $users;
   }
+
+  public function findOne($id)
+  {
+    $address = User::find($id);
+    return $address;
+  }
+
+  public function create(Request $request)
+  {
+    $data = $request->only(["name", "email", "password"]);
+
+    $user = User::create($data);
+
+    return $user;
+  }
 }
