@@ -19,10 +19,14 @@ class CreateUserAndAddressSeed extends Seeder
       "name" => "Everson",
       "email" => "everson@email.com",
       "password" => Hash::make("senhadificil"),
+      "updated_at" => now(),
+      "created_at" => now(),
     ]);
 
     DB::table("addresses")->insert([
       "address" => "Rua qualquer numero qualquer um",
+      "updated_at" => now(),
+      "created_at" => now(),
     ]);
   }
 }
