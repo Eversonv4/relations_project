@@ -25,6 +25,7 @@ class CreateUserAndAddressSeed extends Seeder
 
     DB::table("addresses")->insert([
       "address" => "Rua qualquer numero qualquer um",
+      "user_id" => 1,
       "updated_at" => now(),
       "created_at" => now(),
     ]);
