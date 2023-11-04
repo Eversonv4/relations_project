@@ -27,7 +27,7 @@ Route::get("/users/{id}", [UserController::class, "findOne"]);
 
 Route::get("/addresses", [AddressController::class, "index"]);
 Route::post("/addresses", [AddressController::class, "create"]);
-Route::get("/addresses/{id}", [AddressController::class, "index"]);
+Route::get("/addresses/{id}", [AddressController::class, "findOne"]);
 
 Route::get("/invoices", [InvoiceController::class, "index"]);
 Route::post("/invoices", [InvoiceController::class, "create"]);
