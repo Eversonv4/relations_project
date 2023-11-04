@@ -26,6 +26,7 @@ class InvoiceController extends Controller
   {
     $invoice = Invoice::find($id);
     $invoice["user"] = $invoice->user;
+    $invoice["address"] = $invoice->address;
     return $invoice;
   }
 }
