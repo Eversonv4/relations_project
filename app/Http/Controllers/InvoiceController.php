@@ -25,6 +25,7 @@ class InvoiceController extends Controller
   public function findOne($id)
   {
     $invoice = Invoice::find($id);
-    return $invoice->address;
+    $invoice["user"] = $invoice->user;
+    return $invoice;
   }
 }
